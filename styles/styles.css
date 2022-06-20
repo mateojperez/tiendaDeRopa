@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid{
+    background-image:url("./../images/header.png") ;
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "titulo"
+    "vidriera"
+    "footer"
+    ;
+    grid-template-rows: 100px 150px 3fr 100px;
+    grid-template-columns: 100%;
+}
+
+.header{
+    background-image:url("./../images/header.png") ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 20px;
+}
+
+.headerTitulo{
+    color: rgb(5, 55, 99);
+    -webkit-text-stroke: 1px rgb(186, 186, 186);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 10;
+    font-size: 60px;
+}
+
+.headerLogo{
+    width: 80px;
+    height: 80px;
+    padding-top: 3px;
+}
+
+.Titulo{
+    padding-top: 10px;
+}
+.barra{
+    list-style: none;
+    font-size: 25px;
+    background-color: rgba(5, 55, 99);
+    color: #fffa9d;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 18px;
+    grid-area: footer;
+}
+
+.barra__item{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(5, 55, 99); 
+    color: #fffa9d;
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    border-radius: 18px;
+}
+
+.nav{
+    background-color: rgba(5, 55, 99);
+    height: 80px;
+    color: #fff;
+    font-family: 'Overpass', sans-serif;
+    grid-area: nav;
+}
+
+.navContenedor{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLogo{
+    display: flex;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.navMenu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.navItem{
+    color: #fffa9d;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 99%, 0% 100%);
+    font-size: 20px;
+    font-weight: 900;
+    -webkit-text-stroke: 01px rgb(255, 255, 255);
+}
+
+.navItem::after{
+    content: "";
+    display: block;
+    background: #fffa9d;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.navItem:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+}
+
+.navLabel, .navInput{
+    display: none;
+}
+
+
+@media screen and (max-width: 750px){
+    .navLabel{
+        display: block;
+        cursor: pointer;
+        /* position: relative;
+        left: 80px; */
+    }
+
+    .navMenu{
+        position: fixed;
+        top: 80px;
+        bottom: 0px;
+        width: 100%;
+        left: 0;
+        background-image: url("./../images/cielonube.jpg");
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .navInput:checked + .navMenu{
+        clip-path: circle(100% at center);
+    }
+
+    /* .headerLogo{
+        position: relative;
+        right: 80px;
+    } */
+
+}
+
+@media screen and (max-width: 960px){
+
+    .Titulo{
+        display: none;
+    }
+
+}
+
+@media (max-width: 400px){  
+        .presentacion{
+            display: block;
+            font-size: 01px;
+        }
+}
+
+
+a{
+    color: #fffa9d;
+    text-decoration: none;
+}
+
+.vidriera {
+    font-family: 'Overpass', sans-serif;
+    font-size: 25px;
+    background-image: url("./../images/cielonube.jpg");
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-area: vidriera;
+    width: 100%;
+    
+}
+
+.titulo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    margin: 10px;
+    grid-area: titulo;
+}
+
+.presentacion{
+    font-family: 'Overpass', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-image: url("./../images/cielonube.jpg");
+    text-align: center;
+    border-radius: 18px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.vidrieraProducto {
+    background-image: url("./../images/header.png");    
+    border-radius: 18px;
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+}
+
+.vidriera__datos{
+
+    color: #000000;
+}
+
+.vidrieraImagen{
+    padding-left: 20px;
+}
+
+.vidriera__titulo{
+    background-color: #9fb9f1;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.vidriera__precio{
+    padding: 0px;
+    margin-left: 10px;
+    background-color: #9fb9f1;
+    border-radius: 20px;
+    text-align: center;
+    width: 100px;
+}
+
+.botonComprar {
+    color: #0099CC;
+    background: transparent;
+    border: 2px solid #0099CC;
+    border-radius: 6px;
+    border: solid;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 80px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.botonComprar:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.formularioCompleto{
+    font-family: 'Overpass', sans-serif;
+    background-color: #fffa9dbd;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 30px;
+}
+
+.formulario__titulo{
+    font-size: 50px;
+}
+
+.formularioTitulo{
+    font-size: 30px;
+}
+
+.formularioDato{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.formularioCasilla{
+    background: transparent;
+    border-radius: 6px;
+}
+
+.formularioRegion{
+    max-width: 250px;
+}
+
+.formularioRegion select{
+    display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: rgb(68, 67, 67);
+	font-size: 1em;
+	color: rgb(68, 67, 67);
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.formularioRegion section:hover{
+    background: #008CBA;
+}
+
+.formulariosBotones{
+	margin-bottom: 30px;
+	padding:5px 0 5px 60px;
+}
+
+.formularioBotones .formularioCheck{
+	background: #fff;
+	border-radius: 50%;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habia Una Vez</title>
+    <link rel="shortcut icon" href="./../images/ico.ico"/>
+    <link rel="stylesheet" type="text/css" href="./../styles/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@200&display=swap" rel="stylesheet">
+</head>
+<body class="grid">
+    <nav class="nav">
+        <div class="navContenedor">
+            <div  class="navLogo">
+                <img src="./../images/icono.png" width="180px" height="180px" class="headerLogo"/>
+                <h1 class="Titulo">Habia Una Vez</h1>
+            </div>
+
+            <label for="menu" class="navLabel">
+                <img src="./../images/menu.svg" class="navImg">
+            </label>
+            <input type="checkbox" id="menu" class="navInput">
+
+            <ul class="navMenu">
+                <a href="./../index.html" class="navItem">Inicio</a>
+                <a href="zapatillas.html" class="navItem">Zapatillas</a>
+                <a href="remeras.html" class="navItem">Remeras</a>
+                <a href="buzos.html" class="navItem">Buzos</a>
+            </ul>
+
+        </div>
+          
+    </nav>
+    <section class="formularioCompleto">
+        <form class="formularioInterior">
+            <h2 class="formulario__titulo">Completa El Formulario</h2>
+            <h4 class="formularioTitulo">Ingresa Los Siguientes Datos:</h4>
+            <label for="nombre" class="formularioDato">Tu nombre</label>
+            <input type="text" id="nombre" class="formularioCasilla">
+            <hr/>
+            <label for="apellido" class="formularioDato">Tu Apellido</label>
+            <input type="text" id="apellido" class="formularioCasilla">
+            <hr/>
+            <label for="mail" class="formularioDato">Tu Email</label>
+            <input type="email" id="mail" class="formularioCasilla">
+            <hr/>
+            <div  class="formularioRegion">
+                <select>
+                    <option selected="selected">Selecciona una provincia</option>
+                    <option>Buenos Aires</option>
+                    <option>Capital Federal</option>
+                    <option>Cordoba</option>
+                    <option>Mendoza</option>
+                    <option>Entre Rios</option>
+                    <option>San Luis</option>
+                    <option>Chaco</option>
+                    <option>La Pampa</option>
+                    <option>Tierra Del Fuego</option>
+                    <option>Santa Fe</option>
+                    <option>Salta</option>
+                    <option>Tucuman</option>
+                    <option>Corrientes</option>
+                    <option>Jujuy</option>
+                    <option>Rio Negro</option>
+                    <option>Neuquen</option>
+                    <option>Chubut</option>
+                    <option>San Juan</option>
+                    <option>Santa Cruz</option>
+                    <option>Catamarca</option>
+                    <option>Santiago del Estero</option>
+                    <option>La Rioja</option>
+                    <option>Formosa</option>
+                </select>
+            </div>
+            <hr/>
+            <div class="formularioBotones">
+                <label class="formularioDato">
+                    Es la primera vez que compras en la pagina?
+                </label>
+                <br/>
+                <label for="nunca" class="formularioDato">Nunca he comprado en la pagina</label>
+                <input type="radio" name="compraanterior" id="nunca" class="formularioCheck"/>
+                <label for="sicompre" class="formularioDato">Si, he comprado anteriormente en esta pagina</label>
+                <input type="radio" name="compraanterior" id="sicompre" class="formularioCheck"/>
+                <hr/>
+                <label class="formularioDato">Quieres recibir promociones y descuentos exclusivos a tu email?</label>
+                <br>
+                <label for="si" class="formularioDato">Si, deseo recibir promociones y descuentos</label>
+                <input type="checkbox" name="condiciones" id="si" class="formularioCheck"/>
+                <br/>
+                <label class="formularioDato">Aceptas los terminos y condiciones?</label>
+                <br/>
+                <label for="condi" class="formularioDato">Acepto los terminos y condiciones</label>
+                <input type="checkbox" name="condiciones" id="condi" class="formularioCheck"/>
+                <hr/>
+                <label for="comentarios" class="formularioDato">Algun comentario que desee agregar?</label>
+                <br/>
+                <textarea id="comentarios" rows="10" cols="50"></textarea>
+                <br/>
+                <input type="submit" class="botonComprar"/>
+                <input type="reset" value="Borrar todo" class="botonComprar"/>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <ul class="barra">
+            <li class="barra__item" ><a href="./contacto.html">Contacto</a></li>
+            <li class="barra__item" ><a href="https://www.instagram.com/habiaunavez_pilar/" target="_blank">Seguinos En Instagram</a></li>
+        </ul> 
+    </footer>
+</body>
+</html>
