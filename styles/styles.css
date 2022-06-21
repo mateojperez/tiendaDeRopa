@@ -213,7 +213,7 @@ a{
     border-radius: 18px;
     padding-top: 20px;
     margin-top: 20px;
-    background: linear-gradient(to bottom, blue, white);
+    background: linear-gradient(to bottom, #008CBA, #fff);
 }
 
 .vidrieraProducto {
@@ -226,7 +226,7 @@ a{
 }
 
 .vidriera__datos{
-
+    background: linear-gradient(to bottom, #fff, #008CBA);
     color: #000000;
 }
 
